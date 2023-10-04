@@ -458,23 +458,17 @@ crt = ["awscrt (==0.16.26)"]
 
 [[package]]
 name = "bridgecrew"
-version = "2.3.87"
+version = "2.5.3"
 description = "Infrastructure as code static analysis"
 optional = false
 python-versions = "*"
 files = [
-    {file = "bridgecrew-2.3.87-py3-none-any.whl", hash = "sha256:0b408264e8bfe2401ca29160c12b0e77cf42a5c7598f0b992195a089954e5f3e"},
-    {file = "bridgecrew-2.3.87.tar.gz", hash = "sha256:8ac57c46405962a6ccdc27ed03d80b94bb27201a39ab973471a97c6d58bc20d4"},
+    {file = "bridgecrew-2.5.3-py3-none-any.whl", hash = "sha256:ebb989660e9cfa78b9700e98887dc0e8193fa325c4fdb0b06a78a5af8702d289"},
+    {file = "bridgecrew-2.5.3.tar.gz", hash = "sha256:49069b881c1dba10bf5d5aadded651d63bdf4272bc1338cb6a318ac5ec4a839a"},
 ]
 
 [package.dependencies]
-bc-python-hcl2 = ">=0.3.10"
-checkov = ">=2.3.87"
-jschema-to-python = ">=1.2.3"
-sarif-om = ">=1.0.4"
-
-[package.extras]
-dev = ["bc-python-hcl2 (>=0.3.10)", "checkov (>=2.3.87)", "jschema-to-python (>=1.2.3)", "sarif-om (>=1.0.4)"]
+checkov = "2.5.3"
 
 [[package]]
 name = "bump2version"
@@ -710,13 +704,13 @@ files = [
 
 [[package]]
 name = "checkov"
-version = "2.4.61"
+version = "2.5.3"
 description = "Infrastructure as code static analysis"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "checkov-2.4.61-py3-none-any.whl", hash = "sha256:3824f516dc785bfcf223c03518cbc7278f4603d34e9cc21acba3e8095d52ec2e"},
-    {file = "checkov-2.4.61.tar.gz", hash = "sha256:7022c397cefaff82bf780dc63520ade83b26dcfaac3a510e8d89b2fa2e5a8d62"},
+    {file = "checkov-2.5.3-py3-none-any.whl", hash = "sha256:b5dc8dbcbf74a8bf175aa84cac02cdd44aa621c1eb5f09d55a643b23e1c5b694"},
+    {file = "checkov-2.5.3.tar.gz", hash = "sha256:4d18b945bc6e2e536fe78c1727392d341d0f0adfeb0e9dd55609294541d3f112"},
 ]
 
 [package.dependencies]
@@ -735,7 +729,6 @@ cloudsplaining = ">=0.4.3"
 colorama = "*"
 configargparse = "*"
 cyclonedx-python-lib = ">=2.4.0,<4.0.0"
-deep-merge = "*"
 docker = "*"
 dockerfile-parse = "*"
 dpath = "2.1.3"
@@ -957,17 +950,6 @@ python-versions = ">=3.5"
 files = [
     {file = "decorator-5.1.1-py3-none-any.whl", hash = "sha256:b8c3f85900b9dc423225913c5aace94729fe1fa9763b38939a95226f02d37186"},
     {file = "decorator-5.1.1.tar.gz", hash = "sha256:637996211036b6385ef91435e4fae22989472f9d571faba8927ba8253acbc330"},
-]
-
-[[package]]
-name = "deep-merge"
-version = "0.0.4"
-description = "A simple utility for merging python dictionaries."
-optional = false
-python-versions = "*"
-files = [
-    {file = "deep_merge-0.0.4-py3-none-any.whl", hash = "sha256:8056b4b43c6dfddf5c7b1feb3a09f1ab1cbd74e8382e43736ea8c5619e8e5a4e"},
-    {file = "deep_merge-0.0.4.tar.gz", hash = "sha256:b54415f90934c42e334114e2864cb4d4e7335b34ad396e35ad8610c96065a47e"},
 ]
 
 [[package]]
@@ -1624,38 +1606,6 @@ files = [
     {file = "jmespath-1.0.1-py3-none-any.whl", hash = "sha256:02e2e4cc71b5bcab88332eebf907519190dd9e6e82107fa7f83b1003a6252980"},
     {file = "jmespath-1.0.1.tar.gz", hash = "sha256:90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"},
 ]
-
-[[package]]
-name = "jschema-to-python"
-version = "1.2.3"
-description = "Generate source code for Python classes from a JSON schema."
-optional = false
-python-versions = ">= 2.7"
-files = [
-    {file = "jschema_to_python-1.2.3-py3-none-any.whl", hash = "sha256:8a703ca7604d42d74b2815eecf99a33359a8dccbb80806cce386d5e2dd992b05"},
-    {file = "jschema_to_python-1.2.3.tar.gz", hash = "sha256:76ff14fe5d304708ccad1284e4b11f96a658949a31ee7faed9e0995279549b91"},
-]
-
-[package.dependencies]
-attrs = "*"
-jsonpickle = "*"
-pbr = "*"
-
-[[package]]
-name = "jsonpickle"
-version = "3.0.2"
-description = "Python library for serializing any arbitrary object graph into JSON"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "jsonpickle-3.0.2-py3-none-any.whl", hash = "sha256:4a8442d97ca3f77978afa58068768dba7bff2dbabe79a9647bc3cdafd4ef019f"},
-    {file = "jsonpickle-3.0.2.tar.gz", hash = "sha256:e37abba4bfb3ca4a4647d28bb9f4706436f7b46c8a8333b4a718abafa8e46b37"},
-]
-
-[package.extras]
-docs = ["jaraco.packaging (>=3.2)", "rst.linker (>=1.9)", "sphinx"]
-testing = ["ecdsa", "feedparser", "gmpy2", "numpy", "pandas", "pymongo", "pytest (>=3.5,!=3.7.3)", "pytest-black-multipy", "pytest-checkdocs (>=1.2.3)", "pytest-cov", "pytest-flake8 (>=1.1.1)", "scikit-learn", "sqlalchemy"]
-testing-libs = ["simplejson", "ujson"]
 
 [[package]]
 name = "jsonschema"
@@ -3332,21 +3282,6 @@ botocore = ">=1.12.36,<2.0a.0"
 
 [package.extras]
 crt = ["botocore[crt] (>=1.20.29,<2.0a.0)"]
-
-[[package]]
-name = "sarif-om"
-version = "1.0.4"
-description = "Classes implementing the SARIF 2.1.0 object model."
-optional = false
-python-versions = ">= 2.7"
-files = [
-    {file = "sarif_om-1.0.4-py3-none-any.whl", hash = "sha256:539ef47a662329b1c8502388ad92457425e95dc0aaaf995fe46f4984c4771911"},
-    {file = "sarif_om-1.0.4.tar.gz", hash = "sha256:cd5f416b3083e00d402a92e449a7ff67af46f11241073eea0461802a3b5aef98"},
-]
-
-[package.dependencies]
-attrs = "*"
-pbr = "*"
 
 [[package]]
 name = "schema"
